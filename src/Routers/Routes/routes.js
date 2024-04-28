@@ -10,6 +10,10 @@ const routes= [
             {
                 path: "/",
                 element:<Homepage />
+            },
+            {
+                path:"/properties",
+                element:<Properties />
             }
         ]
     }

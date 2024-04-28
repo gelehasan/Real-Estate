@@ -1,8 +1,8 @@
-
+import "./index.css"
 const Properties = ()=>{
 
-    retun(
-        <div>
+    return(
+        <div className="propertiesContainer">
             this is properities page
         </div>
     )

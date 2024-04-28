@@ -2,13 +2,15 @@
     width: 90%;
     height: 300px;
     color: white;
-
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
+    gap: 25px;
 }
 .showCaseInfo {
 
-    width: 50%;
 }
 .showCaseInfo h1{
     color: #2196f3; 
@@ -21,4 +23,14 @@
     text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; 
     margin: 0;
     padding: 0;
+}
+
+.discoverBtn button{
+    width: 170px;
+    padding: 5px;
+    font-size: 1.10rem;
+    cursor: pointer;
+    background-color: #008afc;
+    border: none;
+    color: white;
 }

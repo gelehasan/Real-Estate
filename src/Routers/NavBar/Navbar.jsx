@@ -3,15 +3,18 @@ import { useState } from "react";
 import menu from "../../Assets/menu.svg";
 import CloseMenu from "../../Assets/x.svg";
 import logo from "../../Assets/logo.png"
+import { useLocation } from 'react-router-dom';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location=useLocation();
+    const homePage = location.pathname === "/";
 
     const handleToggle = () => {
       setIsOpen(!isOpen);
     };
 
     return (
-        <nav className="navbar">
+        <nav className={homePage ? "navbar navHomePage" :  "navbar"}>
             <div className="nav-container">
                 {/* Logo on the left side */}
                 <div className="nav-logo">

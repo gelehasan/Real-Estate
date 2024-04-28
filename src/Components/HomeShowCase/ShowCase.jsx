@@ -8,6 +8,10 @@ const ShowCase = ()=>{
             <h1>Find best places to live and invest in Kenya</h1>
             <p>We have all sort of properties and lands with affordable prices, discover beautiful places to invest your money in</p>
             </div>
+            <div className="discoverBtn">
+            <button> Discover</button>
+            </div>
+           
         </div>
     )
 }
