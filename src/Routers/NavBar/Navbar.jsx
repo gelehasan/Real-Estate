@@ -2,6 +2,7 @@ import "./index.css";
 import { useState } from "react";
 import menu from "../../Assets/menu.svg";
 import CloseMenu from "../../Assets/x.svg";
+import logo from "../../Assets/logo.png"
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,11 +15,11 @@ const Navbar = () => {
             <div className="nav-container">
                 {/* Logo on the left side */}
                 <div className="nav-logo">
-                   Gadooy.
+                   <img src={logo}/>
                 </div>
 
                 {/* Toggle button for small screens */}
-                <img className="nav-toggle" onClick={handleToggle} src={ isOpen ? CloseMenu : menu}/>
+                <img className={isOpen ? "nav-toggles" : "nav-toggle"} onClick={handleToggle} src={ isOpen ? CloseMenu : menu}/>
             
 
                 {/* Navigation Links */}

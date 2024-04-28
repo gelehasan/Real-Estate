@@ -1,0 +1,12 @@
+.homePage{
+    position: absolute;
+    width: 100vw;
+    
+    z-index: -99;
+    height: 100vh;
+    background-image: url(https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,24 @@
+.homePageShowCaseDiv{
+    width: 90%;
+    height: 300px;
+    color: white;
+
+    
+    margin: 0 auto;
+}
+.showCaseInfo {
+
+    width: 50%;
+}
+.showCaseInfo h1{
+    color: #2196f3; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+    margin: 0;
+    padding: 0;
+}
+.showCaseInfo p{
+    color: #000000; /* Black color */
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; 
+    margin: 0;
+    padding: 0;
+}
