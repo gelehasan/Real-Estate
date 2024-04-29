@@ -8,7 +8,7 @@
     width: 100%;
   }
   .navHomePage{
-    position: fixed;
+    position: absolute;
     background-color: transparent;
   }
   
