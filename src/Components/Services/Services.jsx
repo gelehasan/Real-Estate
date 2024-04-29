@@ -1,24 +1,24 @@
 import "./index.css"
-
+import Cards from "../ServiceCards/Cards";
 
 const Services = ()=>{
 
     return(
         <div className="card-container">
-            <Card
+            <Cards
                 icon={<img src="/path-to-buy-icon.png" alt="Buy Land" />}
-                title="Buy Land"
-                description="Find out the guidelines for buying the properties."
+                title="Buy house"
+                description="Discover the steps required to purchase a house."
             />
-            <Card
+            <Cards
                 icon={<img src="/path-to-buy-icon.png" alt="Buy Property" />}
-                title="Buy Property"
-                description="Find out the guidelines for buying the properties."
+                title="Rent a house"
+                description="Discover the steps required to rent a house"
             />
-            <Card
+            <Cards
                 icon={<img src="/path-to-buy-icon.png" alt="Buy Property" />}
-                title="Buy Property"
-                description="Find out the guidelines for buying the properties."
+                title="Buy land"
+                description="Discover the steps required to buy a land"
             />
         </div>
     )

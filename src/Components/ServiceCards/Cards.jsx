@@ -12,3 +12,5 @@ const Cards = ({ icon, title, description })=>{
         </div>
     )
 }
+
+export default Cards;
