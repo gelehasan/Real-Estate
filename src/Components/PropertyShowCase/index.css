@@ -24,7 +24,76 @@
     position: absolute;
      right: 0;
      bottom: 14%;
+     cursor: pointer;
 }
 .propertyInfoViewAll span{
     cursor: pointer;
+}
+
+/**/
+.property-list{
+    display: flex;
+    gap: 10px;
+}
+.property-card {
+    
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-5px);
+  }
+  
+.property-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .property-info {
+    padding: 15px;
+  }
+  
+  .location {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  .property-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .rating {
+    background-color: #ffdd00;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+@media (max-width: 768px) {
+    .propertyInfomation{
+        display: block;
+    }
+    .propertyInfoViewAll{
+        position: relative;
+        border: 1px solid red;
+        text-align: center;
+    }
+    .property-list {
+        flex-direction: column;
+      }
+   
 }
