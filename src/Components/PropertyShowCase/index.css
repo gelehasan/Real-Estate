@@ -1,0 +1,30 @@
+.propertyContainer{
+    border: 1px solid red;
+    padding-top: 5em;
+    background-color: rgb(12, 17, 87);
+    position: relative;
+}
+
+.propertyContent{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.propertyInfomation{
+    position: relative;
+    color: white;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.propertyInfoViewAll{
+    position: absolute;
+     right: 0;
+     bottom: 14%;
+}
+.propertyInfoViewAll span{
+    cursor: pointer;
+}

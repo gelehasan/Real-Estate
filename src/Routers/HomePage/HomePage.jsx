@@ -1,6 +1,7 @@
 import "./index.css";
 import ShowCase from "../../Components/HomeShowCase/ShowCase";
 import Services from "../../Components/Services/Services";
+import PropertyShowcase from "../../Components/PropertyShowCase/PropertyShowcase";
 const Homepage = ()=>{
 
 
@@ -10,9 +11,10 @@ const Homepage = ()=>{
            <ShowCase />
       
         </div>
-        <div>
+        
         <Services/>
-        </div>
+        <PropertyShowcase />
+    
         </div>
       
     
