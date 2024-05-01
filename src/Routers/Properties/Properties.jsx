@@ -3,7 +3,10 @@ const Properties = ()=>{
 
     return(
         <div className="propertiesContainer">
-            this is properities page
+            <div className="searchFilter">
+              
+                <input type="text" placeholder="Search"/>
+            </div>
         </div>
     )
 }
