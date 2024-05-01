@@ -1,4 +1,5 @@
 .propertiesContainer {
-    border: 1px solid red;
-   
+    background-color: rgb(12, 17, 87);
+    width: 100%;
+    height: 90vh;
 }

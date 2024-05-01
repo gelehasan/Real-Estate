@@ -1,5 +1,5 @@
 import "./index.css"
-
+import { Link } from "react-router-dom";
 const ShowCase = ()=>{
 
     return(
@@ -9,7 +9,7 @@ const ShowCase = ()=>{
             <p>We have all sort of properties and lands with affordable prices, discover beautiful places to invest your money in</p>
             </div>
             <div className="discoverBtn">
-            <button> Discover</button>
+         <Link to={"properties"}>  <button> Discover</button> </Link> 
             </div>
            
         </div>
