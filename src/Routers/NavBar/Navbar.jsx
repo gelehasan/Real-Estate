@@ -28,9 +28,9 @@ const Navbar = () => {
                 {/* Navigation Links */}
                 <div className={`nav-items ${isOpen ? 'open' : ''}`}>
                     <a href="/home">Home</a>
-                    <a href="/features">Features</a>
+                    <a href="/features">Properties</a>
                     <a href="/service">Service</a>
-                    <a href="/listed">Listed</a>
+                    <a href="/listed">About</a>
                     <a href="/contact">Contact</a>
                 </div>
             </div>
