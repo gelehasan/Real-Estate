@@ -4,22 +4,33 @@
     height: 90vh;
  
     background-color: rgb(12, 17, 87);
+ 
+}
+.propertiesContent {  
+    height: 700px;
+    width: 90%;
+
+    margin: 0 auto;
+    display: flex;
+    padding-top: 10em;
+    gap: 30px;
+
+  
 }
 
 /* filter section*/
 .searchFilter {
     display: flex;
-    margin-top: 1em;
+   
     flex-direction: column;
-    
-    justify-content: space-between;
-    gap: 30px;
+ 
+   gap: 30px;
  
 
 }
 .propertiesContent h3{
 
- 
+
     text-align: center;
     padding: 0;
     font-size: 1.5rem;
@@ -83,11 +94,15 @@
 }
 /*Filter drop down ends here*/
 /* filter ends*/
-.propertiesContent {  
-    height: 70%;
-    width: 90%;
-    margin: 0 auto;
-  
-    border: 1px solid red;
-  
+
+
+/*Property showcase*/
+
+.propertyShowCase{
+
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    height: fit-content;
+    gap: 4px;
 }
