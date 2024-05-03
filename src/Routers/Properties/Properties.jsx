@@ -1,28 +1,32 @@
 import "./index.css";
 import { useState } from "react";
+import Filters from "../../Components/FilterSection/filter";
+const propertyTypes=["Rent", "Land", "Houses"];
+const cities=["Nairobi", "Garisa", "Mombasa"];
+const filterBy =["Price: Low to high", "Price: High to Low", "Latest published"];
+
 const Properties = ()=>{
-    const [isOpen, setIsOpen] = useState(false); 
-    const toggleDropdown = () => setIsOpen(!isOpen);
-    return(
-        <div className="propertiesContainer">´
-        <div className="propertiesContent">
-            <div className="searchFilter">
-            <h3>Search for properties</h3>
-            <div className="filterOperation">
-                        <div class="propertDropdown">
-                            <button className="dropbtn" onClick={toggleDropdown}>
-                                <span>Tidigast tillträde först </span> <span> {isOpen ? '▲' : '▼'}</span>
-                            </button>
-                            <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
-                                <a href="#">Tidigast tillträde först</a>
-                                <a href="#">Senast publicerad först</a>
-                                <a href="#">Lägst hyra först</a>
-                                <a href="#">Störst först (m2)</a>
-                                <a href="#">Minst först (m2)</a>
-                            </div>
-                        </div>
-            </div>
-            </div>
+
+    return (
+        <div className="propertiesContainer">
+          
+            <div className="propertiesContent">
+                <h3>Search for properties</h3>
+                <div className="searchFilter">
+                    
+                    <Filters
+                        content={"Property type"}
+                        filterData={propertyTypes}
+                    />
+                    <Filters
+                        content={"Cities"}
+                        filterData={cities}
+                    />
+                    <Filters
+                        content={"Filter by:"}
+                        filterData={filterBy}
+                    />
+                </div>
 
             </div>
         </div>

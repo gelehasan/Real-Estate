@@ -1,23 +1,29 @@
 .propertiesContainer {
-    background-color: rgb(12, 17, 87);
+    position: relative;
     width: 100%;
     height: 90vh;
-
+ 
+    background-color: rgb(12, 17, 87);
 }
 
 /* filter section*/
 .searchFilter {
-    color: white;
-    font-size: 1.5rem;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid;
+    margin-top: 1em;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    gap: 30px;
+ 
 
 }
-.searchFilter h3{
-    margin: 0;
+.propertiesContent h3{
+
+ 
+    text-align: center;
     padding: 0;
+    font-size: 1.5rem;
+    color: white;
 }
 .searchFilter input {
     font-size: 1.1rem;
@@ -47,9 +53,10 @@
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     opacity: 0;
@@ -61,23 +68,26 @@
     opacity: 1;
     transform: translateY(0);
 }
-.dropdown-content a {
+
+.dropdown-content ul {
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+        gap: 10px;
 }
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+.dropdown-content ul li:hover{
+    cursor: pointer;
 }
 /*Filter drop down ends here*/
 /* filter ends*/
-.propertiesContent {
-    border: 1px solid red;
-  
+.propertiesContent {  
     height: 70%;
     width: 90%;
     margin: 0 auto;
-    margin-top: 3em;
-    min-height: fit-content;
+  
+    border: 1px solid red;
+  
 }
