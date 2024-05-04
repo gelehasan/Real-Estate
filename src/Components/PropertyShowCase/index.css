@@ -1,5 +1,5 @@
 .propertyContainer{
-    border: 1px solid red;
+
     padding-top: 5em;
     background-color: rgb(12, 17, 87);
     position: relative;
@@ -89,7 +89,6 @@
     }
     .propertyInfoViewAll{
         position: relative;
-        border: 1px solid red;
         text-align: center;
     }
     .property-list {

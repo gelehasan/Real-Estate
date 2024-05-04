@@ -12,6 +12,17 @@ const propertyData=[
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
+        city:"Nairobi",
+        type:"Houses",
+        price:"$25,185",
+        rating:"4.8",
+    },
+    {
+        image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
+        title:"3 BHK Villa",
+        location:"Newyork City, 11th street, USA",
+        city:"Nairobi",
+        type:"Houses",
         price:"$25,185",
          rating:"4.8",
     },
@@ -19,20 +30,17 @@ const propertyData=[
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
+        type:"Land",
+        city:"Garisa",
         price:"$25,185",
-         rating:"4.8",
+        rating:"4.8",
     },
     {
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
-        price:"$25,185",
-         rating:"4.8",
-    },
-    {
-        image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
-        title:"3 BHK Villa",
-        location:"Newyork City, 11th street, USA",
+        city:"Mombasa",
+        type:"Rent",
         price:"$25,185",
          rating:"4.8",
     }
@@ -46,7 +54,7 @@ const Properties = ()=>{
                 <div className="searchFilter">
                     
                     <Filters
-                        content={"Property type"}
+                        content={"Type"}
                         filterData={propertyTypes}
                     />
                     <Filters

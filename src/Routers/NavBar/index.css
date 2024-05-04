@@ -1,11 +1,12 @@
 .navbar {
-   
+ 
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: black;
     padding: 0.5rem 1rem;
     width: 100%;
+    display: none;
   }
   .navHomePage{
     position: absolute;
@@ -74,8 +75,10 @@
     }
     .nav-container {
         margin: 0;
+        
     }
     .nav-items {
+    
       position: fixed;
       top: 0;
       right: 0;
