@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={homePage ? "navbar navHomePage" :  "navbar"}>
+        <nav className={homePage ? "navbars navHomePage" :  "navbars"}>
             <div className="nav-container">
                 {/* Logo on the left side */}
                 <div className="nav-logo">
