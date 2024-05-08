@@ -49,7 +49,7 @@ const Properties = ()=>{
 
     return (
         <div className="propertiesContainer">
-          
+    <p className="searchForPropText"> Search for properties </p>
             <div className="propertiesContent">
                 <div className="searchFilter">
                     
