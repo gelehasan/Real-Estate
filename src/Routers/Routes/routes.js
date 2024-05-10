@@ -3,6 +3,7 @@ import App from "../../App";
 import Properties from "../Properties/Properties";
 import Homepage from "../HomePage/HomePage";
 import SingleProperty from "../../Components/SingleProperty/SingleProperty";
+import AdminSignIn from "../AdminRoute/admin";
 const routes= [
     {
         path:"/",
@@ -19,6 +20,10 @@ const routes= [
             {
                 path:"/singleProperty",
                 element:<SingleProperty/>
+            },
+            {
+                path:"/admin",
+                element:<AdminSignIn />
             }
         ]
     }
