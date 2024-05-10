@@ -1,7 +1,6 @@
 import { useState } from "react"
 import "./index.css"
-
-
+import { SignInUser } from "../../Firebase/firebase"
 
 const Signin = ()=>{
     const userValue={
@@ -13,10 +12,16 @@ const Signin = ()=>{
         const {name, value}= event.target;
      
         setUserInput({...userInput, [name]:value})
-        console.log(userInput)
-    }
-    const submitHandlar = (e)=>{
 
+    }
+    const submitHandlar =  async (e)=>{
+        e.preventDefault();
+        try {
+            const response = await SignInUser(userInput.email, userInput.password);
+   
+        } catch (error) {
+            console.log('Error during sign in:', error);
+        }
     }
 
     return(   
