@@ -4,10 +4,13 @@ import menu from "../../Assets/menu.svg";
 import CloseMenu from "../../Assets/x.svg";
 import logo from "../../Assets/logo.png"
 import { useLocation } from 'react-router-dom';
+import { useSelector } from "react-redux";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location=useLocation();
+    const currentUser = useSelector((state)=>state.user.currentUser);
     const homePage = location.pathname === "/";
+
 
     const handleToggle = () => {
       setIsOpen(!isOpen);
@@ -29,7 +32,8 @@ const Navbar = () => {
                 <div className={`nav-items ${isOpen ? 'open' : ''}`}>
                     <a href="/">Home</a>
                     <a href="/properties">Properties</a>
-                    <a href="/service">Service</a>
+                    {currentUser && <a href="/admin-dashboard"> Admin</a> }
+                   
                     <a href="/listed">About</a>
                     <a href="/contact">Contact</a>
                 </div>

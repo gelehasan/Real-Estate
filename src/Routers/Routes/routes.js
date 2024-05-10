@@ -4,6 +4,7 @@ import Properties from "../Properties/Properties";
 import Homepage from "../HomePage/HomePage";
 import SingleProperty from "../../Components/SingleProperty/SingleProperty";
 import AdminSignIn from "../AdminRoute/admin";
+import AdminDashboard from "../AdminDashboard/AdminDashboard";
 const routes= [
     {
         path:"/",
@@ -24,6 +25,10 @@ const routes= [
             {
                 path:"/admin",
                 element:<AdminSignIn />
+            },
+            {
+                path:"/admin-dashboard",
+                element: <AdminDashboard />
             }
         ]
     }
