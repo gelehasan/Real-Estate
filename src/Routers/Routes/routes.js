@@ -5,6 +5,8 @@ import Homepage from "../HomePage/HomePage";
 import SingleProperty from "../../Components/SingleProperty/SingleProperty";
 import AdminSignIn from "../AdminRoute/admin";
 import AdminDashboard from "../AdminDashboard/AdminDashboard";
+import AddProperty from "../../Components/AddProperty/Addproperty.jsx";
+
 const routes= [
     {
         path:"/",
@@ -29,6 +31,10 @@ const routes= [
             {
                 path:"/admin-dashboard",
                 element: <AdminDashboard />
+            },
+            {
+                path:"/addproperty",
+                element:<AddProperty />
             }
         ]
     }

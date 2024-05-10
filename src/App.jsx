@@ -10,7 +10,7 @@ function App() {
   useEffect( () => {
     const unsubscribe = onAuthStateChangedListener( async (user)=> {
       let userInfo;
-   console.log(user.uid)
+
    if (user) {  
     userInfo=  await getUserInformation (user.uid);
     dispatch(setCurrentUser(userInfo))

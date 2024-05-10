@@ -56,3 +56,35 @@ export const SignOutUser = async ()=>
   export const onAuthStateChangedListener = (callback) =>
     onAuthStateChanged(auth, callback);
 
+
+
+  export const AddNewService = async (formData) => {
+ 
+    console.log(formData)
+    const serviceDocRef = doc(db, "Properties", formData.serviceTitle);
+    const serviceSnapshot = await getDoc(serviceDocRef);
+    
+  
+  if (!serviceSnapshot.exists()) {
+      
+      try {
+  
+      await setDoc(serviceDocRef, {
+        name: formData.serviceTitle, 
+        price: formData.price,
+        location: formData.location,
+        description: formData.description,
+        Images: formData.Images,
+        published:formData.published,
+        city: formData.published,
+        Type:formData.Type
+      });
+  
+      
+      } catch (error) {
+      console.log("error creating the user", error.message);
+      }
+      }
+  
+  
+    };
