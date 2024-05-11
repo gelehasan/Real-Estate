@@ -57,13 +57,12 @@ const AddProperty = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    console.log("Submitted with ", formData)
-    console.log(currentUser.Admin=='true')
     if(currentUser && currentUser.Admin=='true'){
-        console.log("i entered the block")
+    
       try {
       { await  AddNewService(formData)
-
+        Navigate("/")
+        window.location.reload();
     }
       console.log("Submitted with ", formData)
       } catch (error) {
