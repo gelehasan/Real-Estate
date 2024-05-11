@@ -10,11 +10,10 @@ const AddProperty = () => {
     name: "",
     price:"",
     location:"",
-    Description: "",
+    description: "",
     type:"",
     images: [],
     city:"",
-    publishedDate:""
     
   });
   const Navigate = useNavigate();
@@ -53,16 +52,19 @@ const AddProperty = () => {
       otherList: updatedOtherList,
     });
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     console.log("Submitted with ", formData)
-    if(currentUser && currentUser.Admin==true){
+    console.log(currentUser.Admin=='true')
+    if(currentUser && currentUser.Admin=='true'){
+        console.log("i entered the block")
       try {
-      {/*  await  AddNewService(formData)
-        Navigate("/DashboardLinks")
-      window.location.reload();*/}
+      { await  AddNewService(formData)
+
+    }
       console.log("Submitted with ", formData)
       } catch (error) {
         

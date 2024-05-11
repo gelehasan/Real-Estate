@@ -59,27 +59,29 @@ export const SignOutUser = async ()=>
 
 
   export const AddNewService = async (formData) => {
- 
-    console.log(formData)
-    const serviceDocRef = doc(db, "Properties", formData.serviceTitle);
+
+    console.log("Recieved",formData)
+    const serviceDocRef = doc(db, "Properties", formData.name);
     const serviceSnapshot = await getDoc(serviceDocRef);
-    
-  
+    const currentDate = Date.now();
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('en-CA');
+
   if (!serviceSnapshot.exists()) {
       
       try {
   
       await setDoc(serviceDocRef, {
-        name: formData.serviceTitle, 
+        name: formData.name, 
         price: formData.price,
         location: formData.location,
         description: formData.description,
-        Images: formData.Images,
-        published:formData.published,
-        city: formData.published,
-        Type:formData.Type
+        images: formData.images,
+        published:formattedDate,
+        city: formData.city,
+        type:formData.type
       });
-  
+      console.log("successfully added")
       
       } catch (error) {
       console.log("error creating the user", error.message);
