@@ -32,21 +32,15 @@ const AddProperty = () => {
       images: [...formData.images, { id: formData.images.length, value: "" }],
     });
   };
-
-  const handleAddOtherList = () => {
-    setFormData({
-      ...formData,
-      otherList: [...formData.otherList, { id: formData.otherList.length, value: "" }],
-    });
-  };
+;
 
   const handleListaChange = (id, value) => {
-    const updatedListor = formData.listor.map((item) =>
+    const updatedListor = formData.images.map((item) =>
       item.id === id ? { ...item, value } : item
     );
     setFormData({
       ...formData,
-      listor: updatedListor,
+      images: updatedListor,
     });
   };
 
