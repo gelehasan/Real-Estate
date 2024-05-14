@@ -87,5 +87,4 @@ export const AddNewService = async (formData) => {
     }
   }
 
-
 };
