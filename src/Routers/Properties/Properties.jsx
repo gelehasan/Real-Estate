@@ -8,7 +8,7 @@ const cities=["Nairobi", "Garisa", "Mombasa"];
 const filterBy =["Price: Low to high", "Price: High to Low", "Latest published"];
 
 const propertyData=[
-    {
+    {   id:1,
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
@@ -18,6 +18,7 @@ const propertyData=[
         rating:"4.8",
     },
     {
+        id:2,
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
@@ -27,6 +28,7 @@ const propertyData=[
          rating:"4.8",
     },
     {
+        id:3,
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
@@ -36,6 +38,7 @@ const propertyData=[
         rating:"4.8",
     },
     {
+        id:4,
         image:"https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
         title:"3 BHK Villa",
         location:"Newyork City, 11th street, USA",
