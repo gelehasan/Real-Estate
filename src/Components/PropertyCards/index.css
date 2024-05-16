@@ -30,6 +30,11 @@
     text-align: left;
 }
 
+.LinkProperties{
+    text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit text color to remove link color */
+  display: block; 
+}
 
 .property-metas {
     display: flex;

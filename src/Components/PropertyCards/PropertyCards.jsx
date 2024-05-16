@@ -5,7 +5,7 @@ const PropertyCards = ({ Data }) => {
 
   return (
     <div className="property-cards">
-       <Link to={`/property/${Data.id}`}> 
+       <Link to={`/property/${Data.id}`} className="LinkProperties"> 
       <img src={Data.image} alt={Data.title} className="property-images" />
       <div className="property-infos">
         <h3>{Data.title}</h3>
