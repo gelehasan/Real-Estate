@@ -1,9 +1,9 @@
 
 
 
-const Cards = ({ icon, title, description })=>{
+const Cards = ({ icon, title, description }) => {
 
-    return(
+    return (
         <div className="card">
             <div className="icon">{icon}</div>
             <h3>{title}</h3>
