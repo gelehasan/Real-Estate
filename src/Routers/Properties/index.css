@@ -1,13 +1,14 @@
 .propertiesContainer {
     position: relative;
     width: 100%;
-    min-height: 100vh;  
+    min-height: 100vh;
     background-color: rgb(12, 17, 87);
 
 
 }
-.propertiesContent {  
- 
+
+.propertiesContent {
+
     width: 90%;
 
     margin: 0 auto;
@@ -15,20 +16,21 @@
     padding-top: 10em;
     gap: 30px;
 
-  
+
 }
 
 /* filter section*/
 .searchFilter {
     display: flex;
-   
+
     flex-direction: column;
-   
-   gap: 30px;
- 
+
+    gap: 30px;
+
 
 }
-.propertiesContent h3{
+
+.propertiesContent h3 {
 
 
     text-align: center;
@@ -36,6 +38,7 @@
     font-size: 1.5rem;
     color: white;
 }
+
 .searchFilter input {
     font-size: 1.1rem;
     text-align: center;
@@ -48,7 +51,7 @@
 .propertDropdown {
     position: relative;
     display: inline-block;
-    
+
 }
 
 .dropbtn {
@@ -61,7 +64,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-  
+
 }
 
 .dropdown-content {
@@ -69,14 +72,15 @@
     position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
-  
+
     width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
     transform: translateY(-20px);
 }
+
 .dropdown-content.show {
     display: block;
     opacity: 1;
@@ -90,18 +94,20 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-        gap: 10px;
+    gap: 10px;
 }
-.dropdown-content ul li:hover{
+
+.dropdown-content ul li:hover {
     cursor: pointer;
 }
+
 /*Filter drop down ends here*/
 /* filter ends*/
 
 
 /*Property showcase*/
 
-.propertyShowCase{
+.propertyShowCase {
 
     display: grid;
     width: 100%;
@@ -111,55 +117,58 @@
 }
 
 /*searchForPropText*/
-.searchForPropText{
+.searchForPropText {
     margin: 0;
 
-   position: absolute;
-   margin-top: 1em;
-   color: white;
-  width: 100%;
-  text-align: center;
-  font-size: 2rem;
+    position: absolute;
+    margin-top: 1em;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
 }
-@media (max-width:1250px){
-    .propertyShowCase{
-        grid-template-columns: repeat(3,1fr);
+
+@media (max-width:1250px) {
+    .propertyShowCase {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width:940px){
-    .propertyShowCase{
-        grid-template-columns: repeat(2,1fr);
+@media (max-width:940px) {
+    .propertyShowCase {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width:940px){
-    .propertiesContent {  
-     flex-direction: column;
+@media (max-width:940px) {
+    .propertiesContent {
+        flex-direction: column;
     }
+
     .dropdown-content {
         position: absolute;
     }
 
     .searchFilter {
         flex-direction: row;
-    
+
         justify-content: space-between;
-        gap:10px;
+        gap: 10px;
     }
-    .propertyShowCase{
-        grid-template-columns: repeat(3,1fr);
+
+    .propertyShowCase {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width:810px){
+@media (max-width:810px) {
 
     .dropbtn {
         width: 150px;
     }
 
-    .propertyShowCase{
-        grid-template-columns: repeat(2,1fr);
+    .propertyShowCase {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .property-cards {
@@ -167,22 +176,23 @@
     }
 }
 
-@media (max-width:572px){
-    .propertiesContent {  
+@media (max-width:572px) {
+    .propertiesContent {
         width: 100%;
         width: 96%;
         margin: 0 auto;
     }
+
     .dropbtn {
         width: 110px;
         font-size: 14px;
     }
 
-    
-    .propertyShowCase{
+
+    .propertyShowCase {
         width: 96%;
         margin: 0 auto;
-  
+
         align-self: center;
     }
 
@@ -192,13 +202,13 @@
 
 }
 
-@media (max-width:500px){
+@media (max-width:500px) {
     .property-cards {
         width: 190px;
     }
 }
 
-@media (max-width:390px ){
+@media (max-width:390px) {
     .property-cards {
         width: 170px;
     }
