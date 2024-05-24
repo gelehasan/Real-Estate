@@ -1,0 +1,52 @@
+.contactMeContainer {
+    background-color: #0b163f;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .contactMeContent {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  
+  .contactMeContent h1 {
+    margin-bottom: 20px;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contactForm label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .contactForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #27a844;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contactForm button:hover {
+    background-color: #218838;
+  }
+  

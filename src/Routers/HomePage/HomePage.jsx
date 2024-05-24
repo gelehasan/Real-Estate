@@ -2,11 +2,12 @@ import "./index.css";
 import ShowCase from "../../Components/HomeShowCase/ShowCase";
 import Services from "../../Components/Services/Services";
 import PropertyShowcase from "../../Components/PropertyShowCase/PropertyShowcase";
+import Footer from "../../Components/Footer/Footer";
 const Homepage = ()=>{
 
 
     return( 
-        <div> 
+       <>   <div> 
         <div className="homePage">
            <ShowCase />
       
@@ -14,10 +15,11 @@ const Homepage = ()=>{
         
         <Services/>
         <PropertyShowcase />
-    
+        
+       
         </div>
       
-    
+        <Footer /></>
     )
 }
 

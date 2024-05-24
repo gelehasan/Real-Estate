@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import "./index.css";
 import { fetchPropertyById } from "../../Store/propertyReducer/propertiesSlice";
 import { useSelector,useDispatch } from "react-redux";
+import Footer from "../Footer/Footer";
 const images = [
     "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
     "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714744541/houseExample_bozghb.png",
@@ -48,7 +49,7 @@ const SingleProperty = () => {
     };
   
     return (
-      <div className="singlePropertyContainer">
+    <>   <div className="singlePropertyContainer">
         <div className="singlePropertyContent">
           <div className="singlePropertyImages">
             <img src={shownImage} alt="Property" />
@@ -66,6 +67,8 @@ const SingleProperty = () => {
           </div>
         </div>
       </div>
+      
+      <Footer/> </>
     );
   }
   

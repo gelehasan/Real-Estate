@@ -5,6 +5,7 @@ import CloseMenu from "../../Assets/x.svg";
 import logo from "../../Assets/logo.png"
 import { useLocation } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import Footer from "../../Components/Footer/Footer";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
@@ -34,10 +35,11 @@ const Navbar = () => {
                     <a href="/properties">Properties</a>
                     {currentUser && <a href="/admin-dashboard"> Admin</a>}
 
-                    <a href="/listed">About</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/About">About</a>
+                    <a href="/Contact">Contact</a>
                 </div>
             </div>
+        
         </nav>
 
     )

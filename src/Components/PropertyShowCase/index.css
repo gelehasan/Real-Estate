@@ -3,6 +3,7 @@
     padding-top: 5em;
     background-color: rgb(12, 17, 87);
     position: relative;
+ 
 }
 
 .propertyContent{
@@ -51,7 +52,9 @@
   
 .property-image {
     width: 100%;
-    height: auto;
+    width: 400px;
+    height: 250px;
+
     display: block;
   }
   

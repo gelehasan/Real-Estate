@@ -7,6 +7,9 @@ import AdminSignIn from "../AdminRoute/admin";
 import AdminDashboard from "../AdminDashboard/AdminDashboard";
 import ManageProperties from "../../Components/ManageProperties/ManageProperties.jsx";
 import AddProperty from "../../Components/AddProperty/Addproperty.jsx";
+import AboutMe from "../../Components/AboutMe/AboutMe.jsx";
+import ContactMe from "../../Components/Contact/Contact.jsx";
+import EditAboutMe from "../../Components/EditAboutMe/EditAboutMe.jsx";
 
 const routes= [
     {
@@ -44,6 +47,18 @@ const routes= [
             {
                 path:"/manage-properties",
                 element:<ManageProperties />
+            },
+            {
+                path:"/About",
+                element:<AboutMe/>
+            },
+            {
+                path:"/contact",
+                element:<ContactMe />
+            },
+            {
+                path:"/manage-about-me",
+                element:<EditAboutMe/>
             }
         ]
     }

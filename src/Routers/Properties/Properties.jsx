@@ -4,10 +4,10 @@ import PropertyCards from "../../Components/PropertyCards/PropertyCards";
 import Filters from "../../Components/FilterSection/filter";
 import { fetchProperties } from "../../Store/propertyReducer/propertiesSlice";
 import { useDispatch, useSelector } from "react-redux";
-
-const propertyTypes = ["Rent", "Land", "Houses"];
-const cities = ["Nairobi", "Garisa", "Mombasa"];
-const filterBy = ["Price: Low to high", "Price: High to Low", "Latest published"];
+import Footer from "../../Components/Footer/Footer";
+const propertyTypes = ["All","Rent", "Land", "Houses"];
+const cities = ["All","Nairobi", "Garisa", "Mombasa"];
+const filterBy = ["All","Price: Low to high", "Price: High to Low", "Latest published"];
 
 
 
@@ -19,7 +19,7 @@ const Properties = () => {
 
     const [selectedType, setSelectedType] = useState("All");
     const [selectedCity, setSelectedCity] = useState("All");
-    const [selectedFilterBy, setSelectedFilterBy] = useState("Latest published");
+    const [selectedFilterBy, setSelectedFilterBy] = useState("All");
 
     useEffect(() => {
         if (status === 'idle') {
@@ -76,7 +76,7 @@ const Properties = () => {
       const filteredProperties = filterProperties();
      
     return (
-        <div className="propertiesContainer">
+        <> <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> </div>
             <div className="propertiesContent">
                 <div className="searchFilter">
@@ -97,7 +97,7 @@ const Properties = () => {
                         content={"Filter by:"}
                         filterData={filterBy}
                         onChange={(value) => handleFilterChange("Filter by", value)}
-                        selectedType={setSelectedFilterBy}
+                        selectedType={selectedFilterBy}
                     />
                 </div>
                 <div className="propertyShowCase">
@@ -111,6 +111,8 @@ const Properties = () => {
                 </div>
             </div>
         </div>
+
+        <Footer/> </>
     )
 }
 

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import './DashboardLinks.css'; 
+import Footer from '../Footer/Footer';
 
 const DashBoardLinks = ()=>{
 
 
     return(
-        <div className="dashboard-containers">
+     <>   <div className="dashboard-containers">
         <ul className="dashboard-linkss">
             <li>
                 <Link to="/manage-properties" className="manage-dashboard-link">Manage Properties</Link>
@@ -18,6 +19,7 @@ const DashBoardLinks = ()=>{
             </li>
         </ul>
     </div>
+    <Footer /></>
     )
 }
 
