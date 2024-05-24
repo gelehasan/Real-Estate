@@ -33,7 +33,7 @@ const ManageProperties = () => {
 
       {properties.map((item) => (
         <div className="AvaiableServices" key={item.id}>
-          <div><h4>{item.id}</h4></div>
+          <div><h4>{item.name}</h4></div>
           <div className="serviceCrud">
             <Link to={`/UpdateService/${item.id}`}><button>Update</button></Link>
             <button onClick={() => handleDelete(item.id)}>Delete</button>

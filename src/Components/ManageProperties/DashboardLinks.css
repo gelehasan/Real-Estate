@@ -1,7 +1,7 @@
 .dashboard-container {
     width: 80%;
     margin: 0 auto;
-   border: 1px solid red;
+
   }
   
   .dashboard-links {
@@ -54,7 +54,7 @@
     font-size: 1.1rem;
   }
   
-  /* Media query for smaller screens */
+
   @media (max-width: 600px) {
     .dashboard-links {
       flex-direction: row;

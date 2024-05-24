@@ -1,56 +1,36 @@
 import "./index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropertyCards from "../../Components/PropertyCards/PropertyCards";
 import houseIcon from "../../Assets/houseExample.png"
 import Filters from "../../Components/FilterSection/filter";
+import { fetchProperties } from "../../Store/propertyReducer/propertiesSlice";
+import { useDispatch, useSelector } from "react-redux";
 const propertyTypes = ["Rent", "Land", "Houses"];
 const cities = ["Nairobi", "Garisa", "Mombasa"];
 const filterBy = ["Price: Low to high", "Price: High to Low", "Latest published"];
 
-const propertyData = [
-    {
-        id: 1,
-        image: "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
-        title: "3 BHK Villa",
-        location: "Newyork City, 11th street, USA",
-        city: "Nairobi",
-        type: "Houses",
-        price: "$25,185",
-        rating: "4.8",
-    },
-    {
-        id: 2,
-        image: "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
-        title: "3 BHK Villa",
-        location: "Newyork City, 11th street, USA",
-        city: "Nairobi",
-        type: "Houses",
-        price: "$25,185",
-        rating: "4.8",
-    },
-    {
-        id: 3,
-        image: "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
-        title: "3 BHK Villa",
-        location: "Newyork City, 11th street, USA",
-        type: "Land",
-        city: "Garisa",
-        price: "$25,185",
-        rating: "4.8",
-    },
-    {
-        id: 4,
-        image: "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
-        title: "3 BHK Villa",
-        location: "Newyork City, 11th street, USA",
-        city: "Mombasa",
-        type: "Rent",
-        price: "$25,185",
-        rating: "4.8",
-    }
-]
-const Properties = () => {
 
+const Properties = () => {
+    const dispatch = useDispatch();
+    const properties = useSelector((state) => state.properties.properties);
+    const status = useSelector((state) => state.properties.status);
+    const error = useSelector((state) => state.properties.error);
+
+    console.log(properties)
+    useEffect(() => {
+        if (status === 'idle') {
+          dispatch(fetchProperties());
+        }
+      }, [status, dispatch]);
+    
+      if (status === 'loading') {
+        return <div>Loading...</div>;
+      }
+    
+      if (status === 'failed') {
+        return <div>Error: {error}</div>;
+      }
+    
     return (
         <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> </div>
@@ -72,11 +52,11 @@ const Properties = () => {
                 </div>
                 <div className="propertyShowCase">
                     {
-                        propertyData.map(data => {
+                        properties.map(data => {
                             return (
-                                <PropertyCards Data={data} />
+                              <PropertyCards key={data.id} Data={data} />
                             )
-                        })
+                          })
                     }
                 </div>
             </div>

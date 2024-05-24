@@ -22,7 +22,7 @@ const routes= [
                 element:<Properties />
             },
             {
-                path:"/singleProperty",
+                path:"/properties:id",
                 element:<SingleProperty/>
             },
             {
@@ -34,7 +34,11 @@ const routes= [
                 element: <AdminDashboard />
             },
             {
-                path:"/addproperty",
+                path:"/addservice",
+                element:<AddProperty />
+            },
+            {
+                path:"updateservice/:id",
                 element:<AddProperty />
             },
             {

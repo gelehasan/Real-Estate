@@ -15,6 +15,16 @@ export const deleteProperty = createAsyncThunk('properties/deleteProperty', asyn
   return propertyId;
 });
 
+
+export const fetchPropertyById = createAsyncThunk('properties/fetchPropertyById', async (propertyId) => {
+  const docRef = doc(db, 'Properties', propertyId);
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    return { id: docSnap.id, ...docSnap.data() };
+  } else {
+    throw new Error('Property not found');
+  }
+}); 
 const propertyInitalstate= {
     properties: [],
     status: 'idle',
