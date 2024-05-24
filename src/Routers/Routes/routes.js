@@ -22,7 +22,7 @@ const routes= [
                 element:<Properties />
             },
             {
-                path:"/properties:id",
+                path:"/properties/:id",
                 element:<SingleProperty/>
             },
             {

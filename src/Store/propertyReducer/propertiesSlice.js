@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { getDoc } from 'firebase/firestore';
 import {db} from "../../Firebase/firebase";
 
 export const fetchProperties = createAsyncThunk('properties/fetchProperties', async () => {
@@ -27,6 +28,7 @@ export const fetchPropertyById = createAsyncThunk('properties/fetchPropertyById'
 }); 
 const propertyInitalstate= {
     properties: [],
+    selectedProperty: null,
     status: 'idle',
     error: null,
 }
@@ -46,10 +48,21 @@ const propertiesSlice = createSlice({
       .addCase(fetchProperties.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
+      }).addCase(fetchPropertyById.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchPropertyById.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.selectedProperty = action.payload;
+      })
+      .addCase(fetchPropertyById.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
       })
       .addCase(deleteProperty.fulfilled, (state, action) => {
         state.properties = state.properties.filter(property => property.id !== action.payload);
-      });
+      })
+      ;
   },
 });
 
