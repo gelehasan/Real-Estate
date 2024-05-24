@@ -55,7 +55,7 @@ const Properties = () => {
         let filteredProperties = [...properties];
     
         if (selectedType !== "All") {
-          filteredProperties = filteredProperties.filter(property => property.type === selectedType);
+          filteredProperties = filteredProperties.filter(property => property.type.toLocaleLowerCase() === selectedType.toLocaleLowerCase());
         }
     
         if (selectedCity !== "All") {
@@ -74,7 +74,7 @@ const Properties = () => {
       };
   
       const filteredProperties = filterProperties();
-      console.log(filterProperties)
+     
     return (
         <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> </div>
@@ -85,16 +85,19 @@ const Properties = () => {
                         content={"Type"}
                         filterData={propertyTypes}
                         onChange={(value) => handleFilterChange("Type", value)}
+                        selectedType={selectedType}
                     />
                     <Filters
                         content={"Cities"}
                         filterData={cities}
                         onChange={(value) => handleFilterChange("Cities", value)}
+                        selectedType={selectedCity}
                     />
                     <Filters
                         content={"Filter by:"}
                         filterData={filterBy}
                         onChange={(value) => handleFilterChange("Filter by", value)}
+                        selectedType={setSelectedFilterBy}
                     />
                 </div>
                 <div className="propertyShowCase">

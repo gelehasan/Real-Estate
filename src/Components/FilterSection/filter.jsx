@@ -1,10 +1,16 @@
 import { useState } from "react";
 
-const Filters = ({content, filterData,onChange })=>{
+const Filters = ({content, filterData,onChange,selectedType})=>{
     const [isOpen, setIsOpen] = useState(false); 
     const toggleDropdown = () => setIsOpen(!isOpen);
     const handleChange = (e) => {
-        onChange(e);
+        if(selectedType == e){
+            console.log(e)
+            onChange("All");
+         
+        }else{
+            onChange(e);
+        }
       };
     return(
         <div className="filterOperation">
@@ -16,7 +22,7 @@ const Filters = ({content, filterData,onChange })=>{
                 <ul> {filterData.map((x)=>{
                         return (
                          
-                                <li onClick={()=>handleChange(x)} > {x}</li>
+                                <li key={x} className={selectedType==x? "selectedFilter": ""} onClick={()=>handleChange(x) } > {x}</li>
                         
                           
                         ) 
