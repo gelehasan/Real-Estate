@@ -5,16 +5,16 @@ const DashBoardLinks = ()=>{
 
 
     return(
-        <div className="dashboard-container">
-        <ul className="dashboard-links">
+        <div className="dashboard-containers">
+        <ul className="dashboard-linkss">
             <li>
-                <Link to="/manage-properties" className="dashboard-link">Manage Properties</Link>
+                <Link to="/manage-properties" className="manage-dashboard-link">Manage Properties</Link>
             </li>
             <li>
-                <Link to="/manage-about-me" className="dashboard-link">Manage About Me</Link>
+                <Link to="/manage-about-me" className="manage-dashboard-link">Manage About Me</Link>
             </li>
             <li>
-                <Link to="/manage-contact-info" className="dashboard-link">Manage Contact Information</Link>
+                <Link to="/manage-contact-info" className="manage-dashboard-link">Manage Contact Information</Link>
             </li>
         </ul>
     </div>

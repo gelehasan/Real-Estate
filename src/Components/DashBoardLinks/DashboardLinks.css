@@ -1,26 +1,23 @@
-.dashboard-container {
+.dashboard-containers {
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-   
     margin: 0 auto;
-   
-    width: 50%;
-    margin-top: 3em;
+   margin-top: 2em;
 }
 
-.dashboard-links {
+.dashboard-linkss {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.dashboard-links li {
+.dashboard-linkss li {
     margin-bottom: 15px;
 }
 
-.dashboard-link {
+.manage-dashboard-link {
     display: block;
     padding: 10px 20px;
     background-color: #007bff;
@@ -33,6 +30,6 @@
     transition: background-color 0.3s ease;
 }
 
-.dashboard-link:hover {
+.manage-dashboard-link:hover {
     background-color: #0056b3;
 }
