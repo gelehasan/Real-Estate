@@ -25,6 +25,7 @@
 
     width: 70px;
     display: flex;
+
   }
   .nav-logo img{
     width: 100%;
@@ -71,6 +72,11 @@
       display: flex;
 
     }
+    .nav-logo {
+     margin-left: 1em;
+     
+    }
+      
     .nav-items a {
         color: black;
     }
@@ -91,7 +97,7 @@
       width: 100px;
       flex-direction: column;
       background-color: #fff;
-      border: 1px solid red;
+
       transition: transform 0.3s ease;
       transform: translateX(100%);
       padding-top: 3rem;
