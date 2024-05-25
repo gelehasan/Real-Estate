@@ -49,7 +49,7 @@ const Properties = () => {
             break;
         }
       };
-
+      
 
       const filterProperties = () => {
         let filteredProperties = [...properties];
@@ -74,7 +74,7 @@ const Properties = () => {
       };
   
       const filteredProperties = filterProperties();
-     
+     console.log(filterProperties)
     return (
         <> <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> </div>
@@ -101,7 +101,7 @@ const Properties = () => {
                     />
                 </div>
                 <div className="propertyShowCase">
-                    {
+                {
                         filteredProperties.map(data => {
                             return (
                               <PropertyCards key={data.id} Data={data} />

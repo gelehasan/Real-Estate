@@ -36,9 +36,9 @@ const SingleProperty = () => {
     }
   
     const images = property.images || [];
-    console.log('current images',images[currentImageIndex].value)
+
     const shownImage = images[currentImageIndex].value || "https://via.placeholder.com/150";
-    console.log(shownImage)
+
   
     const nextImage = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);

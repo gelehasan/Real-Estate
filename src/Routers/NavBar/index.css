@@ -78,6 +78,10 @@
         margin: 0;
         
     }
+    .navlinkss{
+      margin: 0;
+      padding: 0;
+    }
     .nav-items {
     
       position: fixed;
@@ -87,11 +91,12 @@
       width: 100px;
       flex-direction: column;
       background-color: #fff;
-
+      border: 1px solid red;
       transition: transform 0.3s ease;
       transform: translateX(100%);
-      padding-top: 3rem; /* Adjust as needed */
+      padding-top: 3rem;
       align-items: center;
+      gap: 30px;
       z-index: 9;
     }
     .nav-toggles {

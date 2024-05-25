@@ -2,10 +2,11 @@ import "./index.css"
 import { Link } from "react-router-dom"
 
 const PropertyCards = ({ Data }) => {
+  console.log(Data)
   return (
     <div className="property-cards">
     <div className="property-images"> 
-    <Link to={`/properties/${Data.id}`} className="LinkProperties">  <img src={Data.images[0].value} alt={Data.title} className="property-images" /></Link>
+    <Link to={`/properties/${Data.id}`} className="LinkProperties"> <img src={Data.images[0].value} alt={Data.title} className="property-images" /> </Link>
       </div> 
       <Link to={`/properties/${Data.id}`} className="LinkProperties">
         <div className="property-infos">

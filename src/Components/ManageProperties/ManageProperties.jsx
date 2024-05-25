@@ -8,8 +8,7 @@ const ManageProperties = () => {
   const dispatch = useDispatch();
  const properties = useSelector((state) => state.properties.properties);
   const status = useSelector((state) => state.properties.status);
-  
-  console.log(properties)
+
 
   useEffect(() => {
     if (status === 'idle') {
@@ -22,7 +21,7 @@ const ManageProperties = () => {
   };
   if(!properties) return 
   
-  console.log( properties)
+
 
   return (
     <div className="dashboard-container">

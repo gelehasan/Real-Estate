@@ -32,13 +32,14 @@ const Navbar = () => {
 
                 {/* Navigation Links */}
                 <div className={`nav-items ${isOpen ? 'open' : ''}`}>
-                    <a href="/">Home</a>
-                    <Link to={"/Properties"} className="LinkProperties">Properties </Link>
-                    {currentUser && <Link to={"/admin-dashboard"} className="LinkProperties">Admin </Link> }
-                    <Link to={"/About"} className="LinkProperties">About </Link>
-                    <Link to={"/Contact"} className="LinkProperties">Contact </Link>
-        
-                </div>
+                    <Link to={"/"} className="NavLinksProps">Home</Link>
+                    <Link to={"/Properties"} className="NavLinksProps">Properties</Link>
+                    {currentUser && <Link to={"/admin-dashboard"} className="NavLinksProps">Admin </Link>}
+                    <Link to={"/About"} className="NavLinksProps">About </Link>
+                    <Link to={"/Contact"}className="NavLinksProps">Contact </Link>
+                 
+ 
+      </div>
             </div>
         
         </nav>

@@ -10,7 +10,7 @@ import AddProperty from "../../Components/AddProperty/Addproperty.jsx";
 import AboutMe from "../../Components/AboutMe/AboutMe.jsx";
 import ContactMe from "../../Components/Contact/Contact.jsx";
 import EditAboutMe from "../../Components/EditAboutMe/EditAboutMe.jsx";
-
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute.jsx";
 const routes= [
     {
         path:"/",
@@ -34,19 +34,19 @@ const routes= [
             },
             {
                 path:"/admin-dashboard",
-                element: <AdminDashboard />
+                element: <ProtectedRoute element={<AdminDashboard />} />
             },
             {
                 path:"/addservice",
-                element:<AddProperty />
+                element:<ProtectedRoute element={<AddProperty />} /> 
             },
             {
                 path:"updateservice/:id",
-                element:<AddProperty />
+                element:<ProtectedRoute element={<AddProperty />} /> 
             },
             {
                 path:"/manage-properties",
-                element:<ManageProperties />
+                element:<ProtectedRoute element={<ManageProperties />} /> 
             },
             {
                 path:"/About",
