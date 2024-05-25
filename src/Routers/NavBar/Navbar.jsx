@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className={`nav-items ${isOpen ? 'open' : ''}`}>
                     <a href="/">Home</a>
                     <Link to={"/Properties"} className="LinkProperties">Properties </Link>
-                    {currentUser && <Link to={"/admin-dashboard"} className="LinkProperties">About </Link> }
+                    {currentUser && <Link to={"/admin-dashboard"} className="LinkProperties">Admin </Link> }
                     <Link to={"/About"} className="LinkProperties">About </Link>
                     <Link to={"/Contact"} className="LinkProperties">Contact </Link>
         

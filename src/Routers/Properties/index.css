@@ -15,7 +15,7 @@
     display: flex;
     padding-top: 10em;
     gap: 30px;
-
+   
 
 }
 
@@ -177,6 +177,7 @@
 
     .property-cards {
         width: 250px;
+    
     }
 }
 

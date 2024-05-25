@@ -2,33 +2,35 @@
     position: relative;
     background: #ffffff;
     border-radius: 10px;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
-    width: 300px;
-    
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.property-images{
+    position: relative;
+    height: 150px !important;
 
 }
-
-
-.property-images {
+.property-images  {
     width: 100%;
-    height: 200px;
-    display: block;
-    object-fit: cover;
+ height: 100%;
+    object-fit: cover; /* Ensures the image covers the container area while maintaining aspect ratio */
     border-bottom: 1px solid #e0e0e0;
 }
 
 .property-infos {
-   
-    position: relative;
-    padding: 5px;
-
-    height: 150px;
+    padding: 10px;
+    height: 88%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-grow: 1;
+ 
 }
 
 .property-infos h3 {
@@ -36,23 +38,21 @@
     margin: 0;
     padding: 0;
     text-align: left;
+    flex-grow: 1;
 }
 
-.LinkProperties{
+.LinkProperties {
     text-decoration: none; /* Remove underline from link */
-  color: inherit; /* Inherit text color to remove link color */
-  display: block; 
+    color: inherit; /* Inherit text color to remove link color */
+    display: block; 
+    height: 100%;
 }
 
 .property-metas {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
-
-
 
 .prices {
     font-weight: bold;

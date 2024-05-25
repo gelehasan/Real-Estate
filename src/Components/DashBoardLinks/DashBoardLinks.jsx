@@ -14,9 +14,7 @@ const DashBoardLinks = ()=>{
             <li>
                 <Link to="/manage-about-me" className="manage-dashboard-link">Manage About Me</Link>
             </li>
-            <li>
-                <Link to="/manage-contact-info" className="manage-dashboard-link">Manage Contact Information</Link>
-            </li>
+           
         </ul>
     </div>
     <Footer /></>
