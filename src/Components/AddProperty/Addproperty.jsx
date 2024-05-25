@@ -160,7 +160,7 @@ const AddProperty = () => {
           />
           <label htmlFor="land">Land</label>
 
-          <input
+          <textarea
             type="radio"
             id="houses"
             name="type"
