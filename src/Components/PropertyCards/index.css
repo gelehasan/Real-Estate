@@ -9,23 +9,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: 320px;
 }
 .property-images{
     position: relative;
-    height: 150px !important;
+    
 
 }
 .property-images  {
     width: 100%;
- height: 100%;
+     height: 40%;
     object-fit: cover; /* Ensures the image covers the container area while maintaining aspect ratio */
     border-bottom: 1px solid #e0e0e0;
 }
 
 .property-infos {
     padding: 10px;
-    height: 88%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -5,10 +5,10 @@ const PropertyCards = ({ Data }) => {
   console.log(Data)
   return (
     <div className="property-cards">
-    <div className="property-images"> 
-    <Link to={`/properties/${Data.id}`} className="LinkProperties"> <img src={Data.images[0].value} alt={Data.title} className="property-images" /> </Link>
-      </div> 
-      <Link to={`/properties/${Data.id}`} className="LinkProperties">
+  <Link to={`/properties/${Data.id}`} className="LinkProperties">
+  <img src={Data.images[0].value} alt={Data.title} className="property-images" />  
+       
+     
         <div className="property-infos">
           <h3>{Data.name}</h3>
           <p className="locations">{Data.location}</p>
