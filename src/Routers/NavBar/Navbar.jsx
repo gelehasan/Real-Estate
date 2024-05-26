@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="nav-container">
                 {/* Logo on the left side */}
                 <div className="nav-logo">
-                    <img src={logo} />
+                <Link to={"/"} className="NavLinksProps"> <img src={logo} /> </Link>
                 </div>
 
                 {/* Toggle button for small screens */}
