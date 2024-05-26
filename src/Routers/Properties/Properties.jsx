@@ -27,6 +27,7 @@ const Properties = () => {
         }
       }, [status, dispatch]);
     
+      console.log(status)
       if (status === 'loading') {
         return <div>Loading...</div>;
       }
@@ -74,7 +75,7 @@ const Properties = () => {
       };
   
       const filteredProperties = filterProperties();
-     console.log(filterProperties)
+     
     return (
         <> <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> </div>

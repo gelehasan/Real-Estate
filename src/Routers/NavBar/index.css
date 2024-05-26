@@ -66,7 +66,15 @@
   }
   
 
-  
+  .signoutBtn{
+    width: 90px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+
+  }
   @media (max-width: 768px) {
     .nav-toggle {
       display: flex;

@@ -5,20 +5,15 @@ import storage from 'redux-persist/lib/storage';
 import { persistStore, persistReducer } from 'redux-persist';
 import { Allreducers } from "./Reducers/rootReducer";
 
-const persistConfig = {
-    key: 'root',
-    storage,
-  }; 
-
-const persistedReducer = persistReducer(persistConfig, Allreducers)
+ 
 const middleWare = process.env.NODE_ENV === "development" ? [logger].filter(Boolean) : []
 
 
 export const store = configureStore({
-    reducer: persistedReducer,
+    reducer: Allreducers,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
       serializableCheck: false,
     }).concat(middleWare)
   });
   
-  export const persistor = persistStore(store);
+ 

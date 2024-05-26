@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { doc, getDoc, getFirestore, collection, addDoc, getDocs, updateDoc } from 'firebase/firestore';
 import { deleteDoc } from "firebase/firestore";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword} from "firebase/auth"
 import { onAuthStateChanged } from "firebase/auth";
 import { signOut } from "firebase/auth";
 import { setDoc } from "firebase/firestore";
@@ -90,3 +90,4 @@ export const AddNewService = async (formData) => {
   }
 
 };
+

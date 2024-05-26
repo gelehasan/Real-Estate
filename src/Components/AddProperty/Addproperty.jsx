@@ -4,9 +4,12 @@ import { AddNewService,db } from "../../Firebase/firebase";
 import { getDoc,doc,updateDoc } from "firebase/firestore";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { fetchProperties } from "../../Store/propertyReducer/propertiesSlice";
+import { useDispatch } from "react-redux";
+import { setProperties } from "../../Store/propertyReducer/propertiesSlice";
 const AddProperty = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
+  const properties = useSelector((state)=> state.properties.properties)
   const [formData, setFormData] = useState({
     name: "",
     price: "",
@@ -18,6 +21,7 @@ const AddProperty = () => {
   });
   const navigate = useNavigate();
   const { id } = useParams(); 
+  const dispatch = useDispatch();
 
   console.log()
   useEffect(() => {
@@ -71,13 +75,17 @@ const AddProperty = () => {
 
           const docRef = doc(db, "Properties", id);
           await updateDoc(docRef, formData);
-          console.log("Updated property with ID: ", id);
+     
+
         } else {
           await AddNewService(formData);
-          console.log("Added new property with data: ", formData);
+         
+          console.log("Current properties are",properties)
         }
-        navigate("/manage-properties");
-        window.location.reload();
+        
+         navigate("/manage-properties")
+         window.location.reload()
+     
       } catch (error) {
         console.error("Error submitting form: ", error);
       }
@@ -130,7 +138,7 @@ const AddProperty = () => {
 
         <label>Description</label>
         <br />
-        <input
+        <textarea
           id="description"
           name="description"
           value={formData.description}
@@ -160,7 +168,7 @@ const AddProperty = () => {
           />
           <label htmlFor="land">Land</label>
 
-          <textarea
+          <input
             type="radio"
             id="houses"
             name="type"

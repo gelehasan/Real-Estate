@@ -6,13 +6,26 @@ import logo from "../../Assets/logo.png"
 import { useLocation } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
+import { setCurrentUser } from "../../Store/Reducers/userReducer/userReducer";
+import { useNavigate } from "react-router-dom";
+import { SignOutUser } from "../../Firebase/firebase";
+import { useDispatch } from "react-redux";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const currentUser = useSelector((state) => state.user.currentUser);
     const homePage = location.pathname === "/";
-
+    const dispatch= useDispatch();
+    const navigate = useNavigate();
+    const handleSignOut = async () => {
+        try {
+          await SignOutUser();
+          dispatch(setCurrentUser(null));
+          navigate('/');
+        } catch (error) {
+          console.error('Error signing out:', error.message);
+        }
+      };
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
@@ -37,6 +50,7 @@ const Navbar = () => {
                     {currentUser && <Link to={"/admin-dashboard"} className="NavLinksProps">Admin </Link>}
                     <Link to={"/About"} className="NavLinksProps">About </Link>
                     <Link to={"/Contact"}className="NavLinksProps">Contact </Link>
+                    {currentUser &&   <button onClick={handleSignOut} className="signoutBtn"> Sign out</button> }
                  
  
       </div>

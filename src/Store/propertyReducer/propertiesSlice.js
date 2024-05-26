@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { getDoc } from 'firebase/firestore';
 import {db} from "../../Firebase/firebase";
+import { act } from 'react';
 
 export const fetchProperties = createAsyncThunk('properties/fetchProperties', async () => {
   const propertiesCollection = collection(db, 'Properties');
@@ -35,7 +36,11 @@ const propertyInitalstate= {
 const propertiesSlice = createSlice({
   name: 'properties',
   initialState: propertyInitalstate,
-  reducers: {},
+  reducers: {
+    setProperties: (state, action)=>{
+        state.properties= action.payload
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProperties.pending, (state) => {
@@ -67,3 +72,4 @@ const propertiesSlice = createSlice({
 });
 
 export const propertyReducer= propertiesSlice.reducer;
+export const {setProperties} = propertiesSlice.actions;
