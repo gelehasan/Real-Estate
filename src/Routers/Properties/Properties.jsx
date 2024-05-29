@@ -79,7 +79,7 @@ const Properties = () => {
     return (
         <> <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> 
-            <input /></div>
+            <input type="text" placeholder="Search"/></div>
             <div className="propertiesContent">
                 <div className="searchFilter">
 
