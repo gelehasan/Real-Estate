@@ -41,8 +41,6 @@ const Navbar = () => {
 
                 {/* Toggle button for small screens */}
                 <img className={isOpen ? "nav-toggles" : "nav-toggle"} onClick={handleToggle} src={isOpen ? CloseMenu : menu} />
-
-
                 {/* Navigation Links */}
                 <div className={`nav-items ${isOpen ? 'open' : ''}`}>
                     <Link to={"/"} className="NavLinksProps">Home</Link>
