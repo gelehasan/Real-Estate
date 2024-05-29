@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
 import { getDoc } from 'firebase/firestore';
-import {db} from "../../Firebase/firebase";
+import { db } from "../../Firebase/firebase";
 import { act } from 'react';
 
 export const fetchProperties = createAsyncThunk('properties/fetchProperties', async () => {
@@ -26,19 +26,19 @@ export const fetchPropertyById = createAsyncThunk('properties/fetchPropertyById'
   } else {
     throw new Error('Property not found');
   }
-}); 
-const propertyInitalstate= {
-    properties: [],
-    selectedProperty: null,
-    status: 'idle',
-    error: null,
+});
+const propertyInitalstate = {
+  properties: [],
+  selectedProperty: null,
+  status: 'idle',
+  error: null,
 }
 const propertiesSlice = createSlice({
   name: 'properties',
   initialState: propertyInitalstate,
   reducers: {
-    setProperties: (state, action)=>{
-        state.properties= action.payload
+    setProperties: (state, action) => {
+      state.properties = action.payload
     }
   },
   extraReducers: (builder) => {
@@ -71,5 +71,5 @@ const propertiesSlice = createSlice({
   },
 });
 
-export const propertyReducer= propertiesSlice.reducer;
-export const {setProperties} = propertiesSlice.actions;
+export const propertyReducer = propertiesSlice.reducer;
+export const { setProperties } = propertiesSlice.actions;
