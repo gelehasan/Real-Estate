@@ -37,6 +37,7 @@ const Properties = () => {
       }
       const handleFilterChange = (filterType, value) => {
         switch (filterType) {
+          
           case "Type":
             setSelectedType(value);
             break;
@@ -79,7 +80,7 @@ const Properties = () => {
     return (
         <> <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> 
-            <input type="text" placeholder="Search"/></div>
+            <input type="text" placeholder="Search" onChange={(value)=>handleFilterChange("text", value)}/></div>
             <div className="propertiesContent">
                 <div className="searchFilter">
 
