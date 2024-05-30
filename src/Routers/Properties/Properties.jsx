@@ -20,6 +20,7 @@ const Properties = () => {
     const [selectedType, setSelectedType] = useState("All");
     const [selectedCity, setSelectedCity] = useState("All");
     const [selectedFilterBy, setSelectedFilterBy] = useState("All");
+    const [searchField, setSearchField] = useState("");
 
     useEffect(() => {
         if (status === 'idle') {
@@ -37,7 +38,10 @@ const Properties = () => {
       }
       const handleFilterChange = (filterType, value) => {
         switch (filterType) {
-          
+          case 'search':
+            const text= value.target.value;
+            console.log(text)
+            break;
           case "Type":
             setSelectedType(value);
             break;
@@ -57,7 +61,7 @@ const Properties = () => {
         let filteredProperties = [...properties];
     
         if (selectedType !== "All") {
-          filteredProperties = filteredProperties.filter(property => property.type.toLocaleLowerCase() === selectedType.toLocaleLowerCase());
+          filteredProperties = filteredProperties.filter(property => property.type.toLowerCase() === selectedType.toLowerCase());
         }
     
         if (selectedCity !== "All") {
@@ -80,7 +84,7 @@ const Properties = () => {
     return (
         <> <div className="propertiesContainer">
             <div className="searchForPropText"><p className=""> Search for properties </p> 
-            <input type="text" placeholder="Search" onChange={(value)=>handleFilterChange("text", value)}/></div>
+            <input type="text" placeholder="Search" name="search" onChange={(value)=>handleFilterChange("search", value)}/></div>
             <div className="propertiesContent">
                 <div className="searchFilter">
 
