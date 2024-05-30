@@ -140,9 +140,9 @@
     margin: 0;
 }
 .searchForPropText input{
-    width: 250px;
+    width: 260px;
     border: 33%;
-    height: 20px;
+    height: 30px;
 }
 @media (max-width:1250px) {
     .propertyShowCase {
