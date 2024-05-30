@@ -39,8 +39,9 @@ const Properties = () => {
       const handleFilterChange = (filterType, value) => {
         switch (filterType) {
           case 'search':
-            const text= value.target.value;
-            console.log(text)
+            let text= value.target.value;
+            setSearchField(text)
+         
             break;
           case "Type":
             setSelectedType(value);
@@ -59,7 +60,9 @@ const Properties = () => {
 
       const filterProperties = () => {
         let filteredProperties = [...properties];
-    
+        if (searchField != ""){
+          filteredProperties= filteredProperties.filter((x)=>x.name.toLowerCase().includes(searchField.toLowerCase()));
+        }
         if (selectedType !== "All") {
           filteredProperties = filteredProperties.filter(property => property.type.toLowerCase() === selectedType.toLowerCase());
         }
