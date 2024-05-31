@@ -28,7 +28,7 @@ const Properties = () => {
         }
       }, [status, dispatch]);
     
-      console.log(status)
+ 
       if (status === 'loading') {
         return <div>Loading...</div>;
       }
