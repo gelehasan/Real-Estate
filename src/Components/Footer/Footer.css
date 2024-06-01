@@ -17,6 +17,16 @@
     padding: 0 20px;
   }
   
+  .footerLogoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   padding: 15px;
+  }
+  .footerLogoSection img {
+    width: 70px;
+  }
   .footerSection {
     flex: 1;
     min-width: 200px;
