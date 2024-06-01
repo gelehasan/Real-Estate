@@ -16,6 +16,7 @@ const Properties = () => {
     const properties = useSelector((state) => state.properties.properties);
     const status = useSelector((state) => state.properties.status);
     const error = useSelector((state) => state.properties.error);
+    const [propCities, setPropCities]= useState();
 
     const [selectedType, setSelectedType] = useState("All");
     const [selectedCity, setSelectedCity] = useState("All");
@@ -25,8 +26,20 @@ const Properties = () => {
     useEffect(() => {
         if (status === 'idle') {
           dispatch(fetchProperties());
+       
         }
+        const fetchCities =()=>{
+          const cities = []
+          properties.map((x)=>{
+          cities.push(x.city)
+          })
+                 
+          setPropCities(cities) 
+        } 
+  
+        fetchCities()
       }, [status, dispatch]);
+    
     
  
       if (status === 'loading') {
@@ -36,6 +49,8 @@ const Properties = () => {
       if (status === 'failed') {
         return <div>Error: {error}</div>;
       }
+ 
+    console.log(propCities)
       const handleFilterChange = (filterType, value) => {
         switch (filterType) {
           case 'search':
@@ -99,7 +114,7 @@ const Properties = () => {
                     />
                     <Filters
                         content={"Cities"}
-                        filterData={cities}
+                        filterData={propCities}
                         onChange={(value) => handleFilterChange("Cities", value)}
                         selectedType={selectedCity}
                     />
