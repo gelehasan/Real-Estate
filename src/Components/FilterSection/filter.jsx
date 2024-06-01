@@ -5,7 +5,7 @@ const Filters = ({content, filterData,onChange,selectedType})=>{
     const toggleDropdown = () => setIsOpen(!isOpen);
     const handleChange = (e) => {
         if(selectedType == e){
-            console.log(e)
+        
             onChange("All");
          
         }else{
@@ -19,7 +19,7 @@ const Filters = ({content, filterData,onChange,selectedType})=>{
                     <span>{content} </span> <span> {isOpen ? '▲' : '▼'}</span>
                 </button>
                 <div className={`dropdown-content ${isOpen ? 'show' : ''}`}>
-                <ul> {filterData.map((x)=>{
+                <ul> {filterData && filterData.map((x)=>{
                         return (
                          
                                 <li key={x} className={selectedType==x? "selectedFilter": ""} onClick={()=>handleChange(x) } > {x}</li>

@@ -30,11 +30,14 @@ const Properties = () => {
         }
         const fetchCities =()=>{
           const cities = []
-          properties.map((x)=>{
-          cities.push(x.city)
-          })
-                 
-          setPropCities(cities) 
+          if(properties){
+            properties.map((x)=>{
+              cities.push(x.city)
+              })
+                     
+              setPropCities(cities) 
+          }
+        
         } 
   
         fetchCities()
@@ -50,7 +53,7 @@ const Properties = () => {
         return <div>Error: {error}</div>;
       }
  
-    console.log(propCities)
+ 
       const handleFilterChange = (filterType, value) => {
         switch (filterType) {
           case 'search':
