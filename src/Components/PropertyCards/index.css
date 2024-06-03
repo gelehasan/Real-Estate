@@ -33,13 +33,7 @@
  
 }
 
-.property-infos h3 {
-    color: black;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    flex-grow: 1;
-}
+
 
 .LinkProperties {
     text-decoration: none; /* Remove underline from link */

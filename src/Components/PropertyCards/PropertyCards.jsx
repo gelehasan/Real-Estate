@@ -2,7 +2,7 @@ import "./index.css"
 import { Link } from "react-router-dom"
 
 const PropertyCards = ({ Data }) => {
-  console.log(Data)
+ 
   return (
     <div className="property-cards">
   <Link to={`/properties/${Data.id}`} className="LinkProperties">
@@ -10,7 +10,7 @@ const PropertyCards = ({ Data }) => {
        
      
         <div className="property-infos">
-          <h3>{Data.name}</h3>
+          <p>{Data.name}</p>
           <p className="locations">{Data.location}</p>
           <div className="property-metas">
             <span className="prices">Price: {Data.price}</span>

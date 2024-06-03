@@ -29,10 +29,13 @@ const Properties = () => {
        
         }
         const fetchCities =()=>{
-          const cities = []
+          const cities = ["All"]
           if(properties){
             properties.map((x)=>{
-              cities.push(x.city)
+              if(!cities.includes(x.city)){
+                cities.push(x.city)
+              }
+             
               })
                      
               setPropCities(cities) 
