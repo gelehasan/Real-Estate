@@ -7,34 +7,34 @@ import AdminSignIn from "../AdminRoute/admin";
 import AdminDashboard from "../AdminDashboard/AdminDashboard";
 import AddProperty from "../../Components/AddProperty/Addproperty.jsx";
 
-const routes= [
+const routes = [
     {
-        path:"/",
-        element:<App />,
+        path: "/",
+        element: <App />,
         children: [
             {
                 path: "/",
-                element:<Homepage />
+                element: <Homepage />
             },
             {
-                path:"/properties",
-                element:<Properties />
+                path: "/properties",
+                element: <Properties />
             },
             {
-                path:"/singleProperty",
-                element:<SingleProperty/>
+                path: "/singleProperty",
+                element: <SingleProperty />
             },
             {
-                path:"/admin",
-                element:<AdminSignIn />
+                path: "/admin",
+                element: <AdminSignIn />
             },
             {
-                path:"/admin-dashboard",
+                path: "/admin-dashboard",
                 element: <AdminDashboard />
             },
             {
-                path:"/addproperty",
-                element:<AddProperty />
+                path: "/addproperty",
+                element: <AddProperty />
             }
         ]
     }
@@ -42,4 +42,4 @@ const routes= [
 
 
 
-export const Browserroute= createBrowserRouter(routes);
+export const Browserroute = createBrowserRouter(routes);
