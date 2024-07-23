@@ -1,0 +1,77 @@
+.dashboard-container {
+    width: 80%;
+    margin: 0 auto;
+
+  }
+  
+  .dashboard-links {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 3px;
+  }
+  
+  .AvaiableServices {
+    position: relative;
+    display: flex;
+    font-size: 1.2rem;
+    height: 30px;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .AvaiableServices h4 {
+    margin: 0;
+  }
+  
+  .serviceCrud {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .Nav-link{
+    color: white;
+    text-decoration: none;
+  }
+  .serviceCrud button {
+    border: none;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .AvaiableServices{
+    font-size: 1.1rem;
+  }
+  
+
+  @media (max-width: 600px) {
+    .dashboard-links {
+      flex-direction: row;
+      justify-content: space-around;
+        color: white;
+    }
+    .serviceCrud button{
+      font-size: 15px;
+    }
+    .AvaiableServices{
+        font-size: 15px;
+        border: 1px solid green;
+        height: 45px;
+      }
+      .dashboard-container {
+        width: 86%;
+        
+      }
+  }
+  

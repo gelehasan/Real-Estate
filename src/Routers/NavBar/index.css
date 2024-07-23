@@ -25,6 +25,7 @@
 
     width: 70px;
     display: flex;
+
   }
   .nav-logo img{
     width: 100%;
@@ -65,18 +66,35 @@
   }
   
 
-  
+  .signoutBtn{
+    width: 90px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+
+  }
   @media (max-width: 768px) {
     .nav-toggle {
       display: flex;
 
     }
+    .nav-logo {
+     margin-left: 1em;
+     
+    }
+      
     .nav-items a {
         color: black;
     }
     .nav-container {
         margin: 0;
         
+    }
+    .navlinkss{
+      margin: 0;
+      padding: 0;
     }
     .nav-items {
     
@@ -90,8 +108,9 @@
 
       transition: transform 0.3s ease;
       transform: translateX(100%);
-      padding-top: 3rem; /* Adjust as needed */
+      padding-top: 3rem;
       align-items: center;
+      gap: 30px;
       z-index: 9;
     }
     .nav-toggles {

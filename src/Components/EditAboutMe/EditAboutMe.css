@@ -1,0 +1,53 @@
+.form-container {
+    background-color: #0b163f;
+    color: white;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .about-me-form {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+
+    border-radius: 10px;
+  }
+  
+  .about-me-form h1 {
+    margin-bottom: 20px;
+  }
+  
+  .about-me-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-add-paragraph {
+    padding: 10px 20px;
+    border: none;
+    background-color: #27a844;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-add-paragraph:hover {
+    background-color: #218838;
+  }
+  
+  .btn-submit {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  

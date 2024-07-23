@@ -1,10 +1,10 @@
-
+import DashBoardLinks from "../../Components/DashBoardLinks/DashBoardLinks";
 
 const AdminDashboard = ()=>{
 
     return(
         <div>
-            Admin dashboard
+            <DashBoardLinks/>
         </div>
     )
 }
