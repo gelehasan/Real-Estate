@@ -5,7 +5,7 @@ import Filters from "../../Components/FilterSection/filter";
 import { fetchProperties } from "../../Store/propertyReducer/propertiesSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../../Components/Footer/Footer";
-const propertyTypes = ["All","Rent", "Land", "Houses"];
+const propertyTypes = ["All","Rent","Hotel", "Land", "Houses" ];
 const cities = ["All","Nairobi", "Garisa", "Mombasa"];
 const filterBy = ["All","Price: Low to high", "Price: High to Low", "Latest published"];
 
