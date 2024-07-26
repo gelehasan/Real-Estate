@@ -176,7 +176,16 @@ const AddProperty = () => {
             checked={formData.type === "houses"}
             onChange={(e) => handleInputChange(e.target.name, e.target.value)}
           />
-          <label htmlFor="houses">Houses</label>
+
+          <input
+            type="radio"
+            id="hotel"
+            name="type"
+            value="hotel"
+            checked={formData.type === "hotel"}
+            onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+          />
+          <label htmlFor="hotel">hotel</label>
         </div>
 
         <label>Images</label>
