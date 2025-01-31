@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./index.css";
 import { SignInUser } from "../../Firebase/firebase";
-
+import { useNavigate } from "react-router-dom";
 const Signin = () => {
+    const navigate = useNavigate();
     const userValue = {
         email: "",
         password: ""
@@ -18,6 +19,9 @@ const Signin = () => {
         e.preventDefault();
         try {
             const response = await SignInUser(userInput.email, userInput.password);
+            if(response){
+                navigate("/");
+            }
             
         } catch (error) {
              
