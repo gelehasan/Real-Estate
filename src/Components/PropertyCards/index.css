@@ -11,6 +11,7 @@
     justify-content: space-between;
     height: 380px;
     font-size: 1.07rem;
+ 
 }
 .property-images{
     position: relative;
@@ -25,13 +26,14 @@
 }
 
 .property-infos {
-    padding: 10px;
+   padding-left: 10px;
+   
     padding-top: 0;
     height: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+    justify-content:space-around;
+
  
 }
 
