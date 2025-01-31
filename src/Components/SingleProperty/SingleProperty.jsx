@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import "./index.css";
 import { fetchPropertyById } from "../../Store/propertyReducer/propertiesSlice";
 import { useSelector,useDispatch } from "react-redux";
+
 import Footer from "../Footer/Footer";
 const images = [
     "https://res.cloudinary.com/ddeif6hmk/image/upload/v1714313062/photo-1600585154340-be6161a56a0c_vb23mh.jpg",
@@ -64,7 +65,19 @@ const SingleProperty = () => {
             <h3>Location: {property.location}, {property.city}</h3>
             <p>Description:</p>
             <p>{property.description}</p>
+            <div className="whatsAppDiv"> 
+          <a 
+                href="https://wa.me/+4672260948" 
+                className="whatsapp-button" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Chat on WhatsApp
+              </a>
           </div>
+          </div>
+
+
         </div>
       </div>
       
