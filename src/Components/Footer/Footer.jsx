@@ -35,7 +35,7 @@ const Footer = () => {
 
           <p>
             <a 
-              href="https://wa.me/+4672260948" 
+              href="https://wa.me/+46722760948" 
               target="_blank" 
               rel="noopener noreferrer"
             > 

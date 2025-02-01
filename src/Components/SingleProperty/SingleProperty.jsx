@@ -67,7 +67,7 @@ const SingleProperty = () => {
             <p>{property.description}</p>
             <div className="whatsAppDiv"> 
           <a 
-                href="https://wa.me/+4672260948" 
+                href="https://wa.me/+46722760948" 
                 className="whatsapp-button" 
                 target="_blank" 
                 rel="noopener noreferrer"
