@@ -8,20 +8,24 @@ const PropertyCards = ({ Data }) => {
       : Number(Data.price).toLocaleString("de-DE")
 
   return (
-    <div className="property-cards">
-      <Link to={`/properties/${Data.id}`} className="LinkProperties">
-        <img src={Data.images[0].value} alt={Data.title} className="property-images" />  
-        <div className="property-infos">
-          <p>{Data.name} </p>
-          <p className="locations">{Data.location}</p>
-          <div className="property-metas">
-            <span className="prices">
+    <div className="propertyCardX">
+      <Link to={`/properties/${Data.id}`} className="propertyCardX-link">
+        <img
+          src={Data.images[0].value}
+          alt={Data.title}
+          className="propertyCardX-image"
+        />
+        <div className="propertyCardX-info">
+          <p className="propertyCardX-title">{Data.name}</p>
+          <p className="propertyCardX-location">{Data.location}</p>
+          <div className="propertyCardX-meta">
+            <span className="propertyCardX-price">
               Price: {displayPrice} $
               {Data.newPrice && Data.newPrice !== "" && (
-                <span className="old-price">
+                <span className="propertyCardX-old">
                   (Old: {Number(Data.price).toLocaleString("de-DE")})
                 </span>
-              )} 
+              )}
             </span>
           </div>
         </div>
