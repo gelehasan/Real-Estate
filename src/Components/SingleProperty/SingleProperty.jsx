@@ -48,7 +48,18 @@ const SingleProperty = () => {
     const prevImage = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
-  
+
+      const displayPrice =
+    property.newPrice && property.newPrice !== ""
+      ? Number(property.newPrice).toLocaleString("de-DE")
+      : Number(property.price).toLocaleString("de-DE");
+
+  const usdPrice =
+  property.newPrice && property.newPrice !== ""
+    ? Number(property.newPrice)
+    : Number(property.price);
+
+const kesPrice = usdPrice * 125;
     return (
     <>   <div className="singlePropertyContainer">
         <div className="singlePropertyContent">
@@ -61,7 +72,18 @@ const SingleProperty = () => {
           </div>
           <div className="propertyDetails">
             <h2>{property.name}</h2>
-            <h3>Price: ${property.price}</h3>
+               <h3>
+              Price: ${displayPrice}
+              {property.newPrice && property.newPrice !== "" && (
+                <span className="oldPrice">
+                  {" "}
+                  (Old: {Number(property.price).toLocaleString("de-DE")}$)
+                </span>
+              )}
+            </h3>
+
+
+<h3>Price in KES: {kesPrice.toLocaleString("en-KE")} KSh</h3>
             <h3>Location: {property.location}, {property.city}</h3>
             <p>Description:</p>
             <p>{property.description}</p>
