@@ -1,23 +1,26 @@
-/* Grid wrapper */
 .propertyCardX-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
   padding: 1rem 0;
-  align-items: stretch; /* equal height cards */
+  align-items: stretch;  
+  grid-auto-rows: 1fr;    
 }
 
-/* Card */
+ 
 .propertyCardX {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(44, 62, 80, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s;
+  transition: transform .2s, box-shadow .2s;
   cursor: pointer;
+
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 520px;   /* fixed equal height */
+ 
+  min-height: 420px;   
+  height: auto;         
 }
 
 .propertyCardX:hover {
@@ -25,7 +28,7 @@
   box-shadow: 0 12px 32px rgba(44, 62, 80, 0.18);
 }
 
-/* Image */
+ 
 .propertyCardX-image {
   width: 100%;
   height: 240px;
@@ -35,14 +38,14 @@
   display: block;
 }
 
-/* Info */
+ 
 .propertyCardX-info {
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  gap: 0.7rem;
-  overflow: hidden;
+  flex: 1;             /* pushes price to bottom */
+  gap: .7rem;
+  overflow: visible;   /* prevent hidden price   */
 }
 
 .propertyCardX-link {
@@ -51,29 +54,33 @@
   display: block;
   height: 100%;
 }
-
-/* Title */
+ 
 .propertyCardX-title {
   font-weight: 700;
   color: #2563eb;
   line-height: 1.3;
-  white-space: normal;     /* wrap text */
-  word-break: break-word;  /* break only if too long */
-  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive scaling */
+  font-size: clamp(1rem, 2vw, 1.2rem);
   margin: 0;
+
+ 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Location */
+ 
 .propertyCardX-location {
   color: #6b7280;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(.9rem, 1.5vw, 1rem);
   font-weight: 500;
   margin: 0;
+  line-height: 1.4;
 }
 
-/* Price pinned at bottom */
+ 
 .propertyCardX-meta {
-  margin-top: auto;
+  margin-top: auto; 
 }
 
 .propertyCardX-price {
@@ -82,32 +89,23 @@
   font-size: clamp(1rem, 2vw, 1.2rem);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
 .propertyCardX-old {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: clamp(.9rem, 1.5vw, 1rem);
   color: #b91c1c;
   text-decoration: line-through;
-  margin-left: 0.5rem;
+  margin-left: .5rem;
   font-weight: 500;
 }
-
-/* Responsive */
+ 
 @media (max-width: 900px) {
-  .propertyCardX {
-    height: 440px;
-  }
-  .propertyCardX-image {
-    height: 200px;
-  }
+  .propertyCardX-image { height: 200px; }
+  .propertyCardX       { min-height: 360px; }
 }
 
 @media (max-width: 600px) {
-  .propertyCardX {
-    height: 360px;
-  }
-  .propertyCardX-image {
-    height: 160px;
-  }
+  .propertyCardX-image { height: 160px; }
+  .propertyCardX       { min-height: 320px; }
 }
