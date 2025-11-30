@@ -54,12 +54,15 @@ const SingleProperty = () => {
       ? Number(property.newPrice).toLocaleString("de-DE")
       : Number(property.price).toLocaleString("de-DE");
 
+      console.log("property", property.kenyanRate);
   const usdPrice =
   property.newPrice && property.newPrice !== ""
     ? Number(property.newPrice)
     : Number(property.price);
 
-const kesPrice = usdPrice * 125;
+
+const kesPrice = property.kenyanPrice? property.kenyanPrice : usdPrice * property.kenyanRate;
+
     return (
     <>   <div className="singlePropertyContainer">
         <div className="singlePropertyContent">

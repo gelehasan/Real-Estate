@@ -17,6 +17,8 @@ const AddProperty = () => {
     location: "",
     description: "",
     type: "",
+    kenyanRate:"",
+    kenyanPrice: "",
     images: [],
     city: "",
     discount: "",
@@ -38,6 +40,8 @@ const AddProperty = () => {
               ...data,
               discount: data.discount || "",
               newPrice: data.newPrice || "",
+              kenyanRate: data.kenyanRate || 125.0,
+              kenyanPrice: data.kenyanPrice || "",
             });
           }
         } catch (error) {
@@ -141,6 +145,27 @@ let raw = value;
           onChange={(e) => handleInputChange(e.target.name, e.target.value)}
         />
         <br />
+        <label>Kenyan Conversion Rate</label>
+        <br />
+        <input
+          id="kenyanRate"
+          type="number"
+          name="kenyanRate"
+          value={formData.kenyanRate}
+          onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+        />
+        <br />
+
+        <label>Kenyan Shilling Price</label>
+        <br />
+        <input
+          id="kenyanPrice"
+          type="number"
+          name="kenyanPrice"
+          value={formData.kenyanPrice}
+          onChange={(e) => handleInputChange(e.target.name, e.target.value)}
+        />
+        <br />
 
         <label>Discount (%)</label>
         <br />
@@ -154,7 +179,7 @@ let raw = value;
             onChange={(e) => handleInputChange(e.target.name, e.target.value)}
           />
         <br />
-
+  
         <label>New Price (after discount)</label>
         <br />
         <input

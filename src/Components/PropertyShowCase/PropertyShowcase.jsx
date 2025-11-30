@@ -12,18 +12,22 @@ const PropertyShowcase = () => {
   const error = useSelector((state) => state.properties.error);
   const [randomProperties, setRandomProperties] = useState([]);
 
+  // 👉 Always fetch if list is empty
   useEffect(() => {
-    if (status === 'idle') {
+    if (properties.length === 0) {
       dispatch(fetchProperties());
     }
-  }, [status, dispatch]);
+  }, [dispatch, properties.length]);
 
   useEffect(() => {
     if (properties.length > 0) {
       const selectedProperties = [];
       const usedIndices = new Set();
 
-      while (selectedProperties.length < 3 && selectedProperties.length < properties.length) {
+      while (
+        selectedProperties.length < 3 &&
+        selectedProperties.length < properties.length
+      ) {
         const randomIndex = Math.floor(Math.random() * properties.length);
         if (!usedIndices.has(randomIndex)) {
           usedIndices.add(randomIndex);
@@ -35,17 +39,16 @@ const PropertyShowcase = () => {
     }
   }, [properties]);
 
-  if (status === 'loading') {
+  if (status === "loading") {
     return <div>Loading...</div>;
   }
 
-  if (status === 'failed') {
+  if (status === "failed") {
     return <div>Error: {error}</div>;
   }
 
   return (
     <div className="propertyContainer">
-         
       <div className="propertyContent">
         <div className="propertyInfomation">
           <div>
@@ -53,27 +56,32 @@ const PropertyShowcase = () => {
             <p>Find the property that suits you at affordable price</p>
           </div>
           <div className="propertyInfoViewAll">
-            <Link to={"/properties"} className="LinkProperties"><span>View All</span></Link>
+            <Link to={"/properties"} className="LinkProperties">
+              <span>View All</span>
+            </Link>
           </div>
         </div>
+
         <div className="property-list">
           {randomProperties.map((property) => (
-           <Link to={`properties/${property.id}`} className="LinkProperties"    key={property.id}> 
-            <PropertyCard
-           
-              image={property.images[0].value || 'default_image_url_here'} 
-              title={property.name}
-              location={`${property.location}, ${property.city}`}
-              price={`$${property.price}`}
-              id={properties.id}
-            />
+            <Link
+              to={`properties/${property.id}`}
+              className="LinkProperties"
+              key={property.id}
+            >
+              <PropertyCard
+                image={property.images?.[0]?.value || "default_image_url_here"}
+                title={property.name}
+                location={`${property.location}, ${property.city}`}
+                price={`$${property.price}`}
+                id={property.id}   // ✅ FIXED
+              />
             </Link>
           ))}
         </div>
       </div>
-  
     </div>
   );
-}
+};
 
 export default PropertyShowcase;
