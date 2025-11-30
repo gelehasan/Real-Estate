@@ -69,9 +69,9 @@ const kesPrice = property.kenyanPrice? property.kenyanPrice : usdPrice * propert
       Price (USD): $${displayPrice}
       Price (KES): ${kesPrice.toLocaleString("en-KE")} KSh`;
 
-const encodedMessage = encodeURIComponent(whatsappMessage);
+  const encodedMessage = encodeURIComponent(whatsappMessage);
 
-const whatsappLink = `https://wa.me/46722760948?text=${encodedMessage}`;
+const whatsappLink = `https://wa.me/254708355795?text=${encodedMessage}`;
 
 
     return (
