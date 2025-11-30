@@ -19,7 +19,9 @@ const SingleProperty = () => {
     const status = useSelector((state) => state.properties.status);
     const error = useSelector((state) => state.properties.error);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+
+
+
     useEffect(() => {
       dispatch(fetchPropertyById(id));
     }, [dispatch, id]);
@@ -59,9 +61,18 @@ const SingleProperty = () => {
   property.newPrice && property.newPrice !== ""
     ? Number(property.newPrice)
     : Number(property.price);
-
-
 const kesPrice = property.kenyanPrice? property.kenyanPrice : usdPrice * property.kenyanRate;
+
+  const whatsappMessage = `Hi, I am interested in this property and would like to receive further information.
+      Property Name: ${property.name}
+      Location: ${property.location}, ${property.city}
+      Price (USD): $${displayPrice}
+      Price (KES): ${kesPrice.toLocaleString("en-KE")} KSh`;
+
+const encodedMessage = encodeURIComponent(whatsappMessage);
+
+const whatsappLink = `https://wa.me/46722760948?text=${encodedMessage}`;
+
 
     return (
     <>   <div className="singlePropertyContainer">
@@ -92,7 +103,7 @@ const kesPrice = property.kenyanPrice? property.kenyanPrice : usdPrice * propert
             <p>{property.description}</p>
             <div className="whatsAppDiv"> 
           <a 
-                href="https://wa.me/+46722760948" 
+                href={whatsappLink} 
                 className="whatsapp-button" 
                 target="_blank" 
                 rel="noopener noreferrer"

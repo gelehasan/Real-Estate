@@ -160,7 +160,7 @@ let raw = value;
         <br />
         <input
           id="kenyanPrice"
-          type="number"
+          type="text"
           name="kenyanPrice"
           value={formData.kenyanPrice}
           onChange={(e) => handleInputChange(e.target.name, e.target.value)}

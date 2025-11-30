@@ -12,7 +12,7 @@ const PropertyShowcase = () => {
   const error = useSelector((state) => state.properties.error);
   const [randomProperties, setRandomProperties] = useState([]);
 
-  // 👉 Always fetch if list is empty
+  // Always fetch if store is empty
   useEffect(() => {
     if (properties.length === 0) {
       dispatch(fetchProperties());
@@ -39,8 +39,9 @@ const PropertyShowcase = () => {
     }
   }, [properties]);
 
-  if (status === "loading") {
-    return <div>Loading...</div>;
+  // 🚨 Prevent UI from rendering before data is available
+  if (status === "loading" || properties.length === 0) {
+    return <div>Loading properties...</div>;
   }
 
   if (status === "failed") {
@@ -74,7 +75,7 @@ const PropertyShowcase = () => {
                 title={property.name}
                 location={`${property.location}, ${property.city}`}
                 price={`$${property.price}`}
-                id={property.id}   // ✅ FIXED
+                id={property.id}
               />
             </Link>
           ))}
