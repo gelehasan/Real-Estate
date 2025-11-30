@@ -33,7 +33,7 @@
     height: auto;
    
     height: 400px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .imageNav {
@@ -43,8 +43,12 @@
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    align-items: center; 
+ 
 }
-
+.imgChanger{
+    background-color: black !important;
+}
 .imageNav button {
     background: none;
     border: none;

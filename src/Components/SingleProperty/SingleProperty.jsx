@@ -80,8 +80,8 @@ const whatsappLink = `https://wa.me/46722760948?text=${encodedMessage}`;
           <div className="singlePropertyImages">
             <img src={shownImage} alt="Property" />
             <div className="imageNav">
-              <button onClick={prevImage}>&lt;</button>
-              <button onClick={nextImage}>&gt;</button>
+              <button onClick={prevImage} className="imgChanger">&lt;</button>
+              <button onClick={nextImage}  className="imgChanger">&gt;</button>
             </div>
           </div>
           <div className="propertyDetails">
