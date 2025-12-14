@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footerSection">
           <h3>Contact</h3>
           <p>Email: alabhas98@gmail.com</p>
-          <p>Phone: +254708355795</p>
+          <p>WhatsApp: +254708355795</p>
         </div>
         <div className="footerSection">
           <h3>Follow Us</h3>
@@ -31,10 +31,13 @@ const Footer = () => {
           <p>
             <a href="https://www.instagram.com/alabhas98/" target="_blank" rel="noopener noreferrer">Instagram</a>
           </p>
+         <p>
+            <a href="https://www.tiktok.com/@gadooy224" target="_blank" rel="noopener noreferrer">Tiktok</a>
+          </p>
 
           <p>
             <a 
-              href="https://wa.me/+46722760948" 
+              href="https://wa.me/+254708355795" 
               target="_blank" 
               rel="noopener noreferrer"
             > 
